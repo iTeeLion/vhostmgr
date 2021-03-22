@@ -6,8 +6,8 @@ Include /etc/apache2/sites/_default.conf
 <VirtualHost *:{{PORT_SSL}}>
 Include /etc/apache2/sites/_default.conf
 
-SSLCertificateFile /var/www/_ssl/cert.pem
-SSLCertificateKeyFile /var/www/_ssl/privkey.pem
+SSLCertificateFile /var/www/_ssl/default_fullchain.pem;
+SSLCertificateKeyFile /var/www/_ssl/default_privkey.pem;
 Include /etc/letsencrypt/options-ssl-apache.conf
 </VirtualHost>
 
