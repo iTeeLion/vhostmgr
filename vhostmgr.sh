@@ -289,6 +289,11 @@ function askPhpVersion(){
     fi
 }
 
+function createVhostDirs(){
+    mkdir -p /var/www/$DOMAIN/public
+    mkdir -p /var/www/$DOMAIN/logs
+}
+
 function createVhost(){
     askDomain
     askAlias
@@ -297,6 +302,7 @@ function createVhost(){
     askPhpVersion
     askUseHttps
     askUseLe
+    createVhostDirs
     chooseConfig
     echo "Vhost created!"
 }
