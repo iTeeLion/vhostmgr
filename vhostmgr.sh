@@ -203,6 +203,11 @@ function chooseConfig(){
 	;;
 	3)
 	    doNginxProxyApache
+	    echo "########################################"
+	    echo "# Don't forget:                        #"
+	    echo "# Set listen ports in apache and nginx #"
+	    echo "# Install apache lib - mod_rpaf        #"
+	    echo "########################################"
 	;;
 	*)
 	    chooseConfig
