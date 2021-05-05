@@ -78,9 +78,9 @@ function doSslCert(){
 	        echo "Creating new let's encrypt certificate"
 	        if [ -z $ALIAS]
 	        then
-		        certbot certonly --webroot -n -w "/var/www/$DOMAIN/public" -d $DOMAIN
+		        certbot certonly --webroot -n -w "/var/www/vhosts/$DOMAIN/public" -d $DOMAIN
 	        else
-		        certbot certonly --webroot -n -w "/var/www/$DOMAIN/public" -d $DOMAIN -d $ALIAS
+		        certbot certonly --webroot -n -w "/var/www/vhosts/$DOMAIN/public" -d $DOMAIN -d $ALIAS
 	        fi
 	        findSslDir $DOMAIN
 	    else
@@ -295,8 +295,8 @@ function askPhpVersion(){
 }
 
 function createVhostDirs(){
-    mkdir -p /var/www/$DOMAIN/public
-    mkdir -p /var/www/$DOMAIN/logs
+    mkdir -p /var/www/vhosts/$DOMAIN/public
+    mkdir -p /var/www/vhosts/$DOMAIN/logs
 }
 
 function createVhost(){
