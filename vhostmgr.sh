@@ -76,7 +76,7 @@ function doSslCert(){
 	    if [ -z "$DOMAIN_CERT" ]
 	    then
 	        echo "Creating new let's encrypt certificate"
-	        if [ -z $ALIAS]
+	        if [ -z $ALIAS ]
 	        then
 		        certbot certonly --webroot -n -w "/var/www/vhosts/$DOMAIN/public" -d $DOMAIN
 	        else
